@@ -11,7 +11,7 @@ export class Search extends Component {
   }
 }
 
-export default Dashboard
+export default Search
 
 
 
