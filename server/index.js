@@ -8,6 +8,7 @@ const express = require('express')
   , session = require('express-session')
   , app = express()
   , PORT = 8080;
+
 app.use(bodyParser.json());
 app.use(cors());
 app.use(session({
@@ -20,6 +21,7 @@ app.use(passport.session());
 massive(process.env.CONNECTION_STRING).then((db) => {
   app.set('db', db);
 });
+
 passport.use(new Auth0Strategy({
   domain: process.env.AUTH_DOMAIN,
   clientID: process.env.AUTH_CLIENTID,
@@ -34,7 +36,8 @@ passport.use(new Auth0Strategy({
       return done(null, user[0].id);
     } else {
       db.create_user([
-        userData.name,
+        userData.given_name,
+        userData.family_name,
         userData.gender,
         userData.identities[0].user_id
       ]).then(user => {
@@ -43,20 +46,24 @@ passport.use(new Auth0Strategy({
     }
   });
 }))
+
 passport.serializeUser(function (id, done) {
   done(null, id);
   console.log(id);
 })
+
 passport.deserializeUser(function (id, done) {
   app.get('db').find_session_user([id]).then(user => {
     return done(null, user[0]);
   })
   // done(null, id); //second param is put on req.user
 })
+
 //endpoints//
-app.get('/auth/login', passport.authenticate('auth0'))
+
+app.get('/', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-  sucessRedirect: 'https://localhost:3000/dashboard',
-  failureRedirect: '/auth/login'
+  successRedirect: 'http://localhost:3000/#/search',
+  failureRedirect: '/'
 }))
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));

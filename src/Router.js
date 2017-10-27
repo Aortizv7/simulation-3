@@ -12,7 +12,7 @@ export default function Router() {
 return ( 
 
 <Switch>
-    <Route exact path='/auth/login' component={ Login }/>
+    <Route path='/' component={ Login } exact />
     <Route path='/search' component={ Search } />
     <Route path='/profile' component={ Profile } />
     <Route path='/edit/profile' component={ EditProfile } />
