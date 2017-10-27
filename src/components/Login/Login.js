@@ -10,7 +10,7 @@ export class Login extends Component {
           <section className='login_box'>
             <div className='logo'></div>
             <div className='helo'>Helo</div>
-            <button href={process.env.AUTH_LOGIN} className='login_button'>Login/Register</button>
+            <button href={process.env.REACT_APP_LOGIN} className='login_button'>Login/Register</button>
           </section>
         </div>
       </main>
