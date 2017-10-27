@@ -26,8 +26,10 @@ class Profile extends Component {
         
         <div>
           <p className="reccomendation">Reccomended Friends</p>
-          Sorted by 
-          <select className="selectoptn" >
+            
+            <span>Sorted by</span>
+          
+          <select className="selectoptn" > 
             <option >First Name</option>
             <option value="">Last Name</option>
             <option value="">Gender</option>

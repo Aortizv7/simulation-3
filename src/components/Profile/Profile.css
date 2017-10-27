@@ -1,10 +1,15 @@
 .profilepic{ 
-
+    background-color: #B2D6CC;
+    margin: auto;
 }
 .intro{
-
+background-color: palegreen
 }
 
 .reccomendation{
-    
+background-color: blue
+}
+
+.selectoptn{
+    background-color: yellow
 }
