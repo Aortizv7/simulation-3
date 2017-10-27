@@ -12,10 +12,10 @@ export default function Router() {
 return ( 
 
 <Switch>
-    <Route to='/auth/login' component={ Login } />
-    <Route to='/dashboard' component={ Dashboard } />
-    <Route to='/profile' component={ Profile } />
-    <Route to='/edit/profile' component={ EditProfile } />
+    <Route exact path='/auth/login' component={ Login } />
+    <Route path='/dashboard' component={ Dashboard } />
+    <Route path='/profile' component={ Profile } />
+    <Route path='/edit/profile' component={ EditProfile } />
 </Switch>
 
 )}
