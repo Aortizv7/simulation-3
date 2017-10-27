@@ -6,11 +6,13 @@ export class Login extends Component {
   render() {
     return (
       <main className='main_background'>
-        <section className='login_box'>
-          <img alt='logo' />
-          <div>Helo</div>
-          <button>Login/Register</button>
-        </section>
+        <div className='box_position'>
+          <section className='login_box'>
+            <div className='logo'></div>
+            <div className='helo'>Helo</div>
+            <button href={process.env.AUTH_LOGIN} className='login_button'>Login/Register</button>
+          </section>
+        </div>
       </main>
     )
   }
