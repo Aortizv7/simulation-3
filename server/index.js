@@ -3,15 +3,15 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , cors = require('cors')
     , massive = require('massive')
-    ,passport=require('passport')
-    ,Auth0Strategy=require('passport-auth0')
-    ,session=require('express-session')
+    , passport = require('passport')
+    , Auth0Strategy = require('passport-auth0')
+    , session = require('express-session')
     , app = express()
-    , PORT = 8080
+    , PORT = 8080;
 
 
-app.use(bodyParser.json())
-app.use(cors())
+app.use(bodyParser.json());
+app.use(cors());
 
 // app.use(session({
 //     secret: process.env.SECRET,
