@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Dropdown from 'react-dropdown';
 
+const options=['First Name','Last Name','Gender','Hobby','Hair Color','Eye Color','Birthday'];
+
 export class EditProfile extends Component {
   constructor(){
     super();
