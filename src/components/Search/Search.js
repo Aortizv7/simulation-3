@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import './Dashboard.css';
+import './Search.css';
 
-export class Dashboard extends Component {
+export class Search extends Component {
   render() {
     return (
       <div>
-          <h1> This is the Dashboard </h1>
+          <h1> This is the Search </h1>
       </div>
     )
   }
