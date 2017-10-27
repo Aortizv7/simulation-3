@@ -2,6 +2,12 @@ import React, {Component} from 'react';
 import './Search.css';
 
 export class Search extends Component {
+  constructor(){
+    super()
+    this.sate={
+
+    }
+  }
   render() {
     return (
       <div>
