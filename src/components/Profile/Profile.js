@@ -17,18 +17,17 @@ class Profile extends Component {
           <Link to ="/edit/profile">
             <button>Edit Profile</button>
           </Link>
+          <p intro>Hello this is some text</p>
         </div>
      
-        <div className="intro">
-          <p>Hello this is some text</p>
-        </div> 
+       
+          
+        
 
         
         <div>
           <p className="reccomendation">Reccomended Friends</p>
-            
             <span>Sorted by</span>
-          
           <select className="selectoptn" > 
             <option >First Name</option>
             <option value="">Last Name</option>
