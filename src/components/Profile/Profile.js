@@ -1,30 +1,17 @@
 import React, { Component } from 'react';
-import Dropdown from 'react-dropdown';
 
-const options=['First Name','Last Name','Gender','Hobby','Hair Color','Eye Color','Birthday'];
+import './Profile.css'
 
-export class EditProfile extends Component {
-  constructor(){
-    super();
 
-    this.state={
-      selected: options[0]
-    }
-    this._onSelect = this._onSelect.bind(this)
-  }
 
-  _onSelect(option){
-    console.log('You selected', option.label)
-    this.setState({selected:option})
-  }
+class Profile extends Component {
 
   render() {
-    const options=['First Name','Last Name','Gender','Hobby','Hair Color','Eye Color','Birthday'];
-    const defaultOption = options[0];
+    
     return (
      <div>
 
-        <div className="">
+        <div className="profilepic">
           <img src="" alt="to be cntd pic" />
           <button>Edit Profile</button>
         </div>
@@ -33,8 +20,19 @@ export class EditProfile extends Component {
           <p>Hello this is some text</p>
         </div> 
 
+        
         <div>
-          Sorted by<Dropdown options = { options } onChange={this._onSelect} value={defaultOption} placeholder ="Select an option"/>
+          <p className="reccomendation">Reccomended Friends</p>
+          Sorted by 
+          <select className="selectoptn" >
+            <option >First Name</option>
+            <option value="">Last Name</option>
+            <option value="">Gender</option>
+            <option value="">Hobby</option>
+            <option value="">Hair Color</option>
+            <option value="">Eye Color</option>
+            <option value="">Birthday</option>
+          </select>
         </div>
 
       </div>
@@ -42,4 +40,4 @@ export class EditProfile extends Component {
   }
 }
 
-export default EditProfile
+export default Profile
